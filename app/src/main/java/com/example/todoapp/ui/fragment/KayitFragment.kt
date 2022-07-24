@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.navigation.Navigation
 import com.example.todoapp.R
 import com.example.todoapp.databinding.FragmentKayitBinding
 import com.example.todoapp.ui.viewmodel.KayitFragmentViewModel
@@ -33,6 +34,7 @@ class KayitFragment : Fragment() {
 
     fun buttonKaydet(yapilacak_is:String){
         viewModel.kayit(yapilacak_is)
+        Navigation.findNavController(tasarim.buttonKaydet).navigate(R.id.anasayfaGecis2)
 
     }
 

@@ -8,10 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
 import com.example.todoapp.R
 import com.example.todoapp.databinding.FragmentDetayBinding
 import com.example.todoapp.ui.viewmodel.DetayFragmentViewModel
+import com.example.todoapp.utils.gecisYap
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -38,6 +40,7 @@ class DetayFragment : Fragment() {
 
     fun buttonGuncelle(yapilacak_id:Int,yapilacak_is:String){
         viewModel.guncelle(yapilacak_id,yapilacak_is)
+        Navigation.findNavController(tasarim.buttonGuncelle).navigate(R.id.anasayfaGecis1)
 
     }
 
